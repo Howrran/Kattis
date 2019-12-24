@@ -1,0 +1,1 @@
+print(type(print(type(type(1)))))

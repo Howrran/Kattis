@@ -1,12 +1,12 @@
-s = sorted(input())
+d = {1 : 0, 2 : 0, 3 : 1}
 
-if len(s) and s[0] == '0':
-    counter = 0
-    for i in s:
-        if i == '0':
-            counter +=1
-        else:
-            break
-        s[0],s[counter] = s[counter], s[0]
+d[1] += 1
 
-print(''.join(s), ''.join(sorted(s,reverse=True)))
+m = -1
+m_index = -1
+for i in d:
+    if d[i] > m:
+        m = d[i]
+        m_index = i
+
+print(m, m_index)
